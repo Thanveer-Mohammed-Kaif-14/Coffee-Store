@@ -16,9 +16,9 @@ const navbarEl = `<nav class="navbar">
 
         <div class="nav-icons">
 
-            <a href="#" class="cart-icon">
-                <i class="fa-solid fa-cart-arrow-down"></i>
-                <span>2</span>
+            <a href="cart.html" class="cart-icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-count">0</span>
             </a>
 
             <div class="hamburger" id="hamburger">

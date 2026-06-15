@@ -80,9 +80,16 @@ body{
 
 .cart-icon{
     color:#000;
-    font-size:1.4rem;
+    text-decoration: none;
 }
-
+.cart-icon .fa-solid{
+ font-size: 2.5rem;
+}
+.cart-count{
+     font-family: "Inter", sans-serif;
+     font-size: 1.8rem;
+     font-weight: 900;
+}
 /* HAMBURGER */
 
 .hamburger{
@@ -464,6 +471,10 @@ body{
     margin-bottom: 15px;
       font-family: "Plus Jakarta Sans", sans-serif;
 }
+.filter-section label{
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-weight: 800;
+}
 
 .filt-btn{
     display: flex;
@@ -476,6 +487,9 @@ body{
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 .filt-btn button.active{
@@ -599,18 +613,14 @@ object-fit: cover;
    gap: 50px;
     
 }
-.product-details .details .img-container-detail{
-    width: 600px;
-    height: 500px;
-    object-fit: cover;
-}
+
 .product-details .details .img-container-detail{
     perspective: 1000px;
 }
 
 .product-details .details .img-container-detail img{
-    width: 100%;
-    height: 100%;
+  width: 600px;
+  height: 500px;
     object-fit: cover;
     border-radius: 20px;
     border: 5px solid #311103;
@@ -633,12 +643,12 @@ object-fit: cover;
 .prod-detail {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
   align-items: flex-start;
 }
 .prod-detail h1{
    font-family: "Plus Jakarta Sans", sans-serif;
-   font-size: 90px;   
+   font-size: 80px;   
 }
 .prod-detail h3{
     font-family: "Inter", sans-serif;
@@ -656,13 +666,50 @@ object-fit: cover;
     width: 70%;
     font-weight: 600;
 }
-.prod-detail button{
+.prod-detail .AddCart{
         padding: 15px 30px;
     border-radius: 10px;
     border: 2px solid #371406;
     background-color: #371406;
     color: white;
     font-family: "Plus Jakarta Sans", sans-serif;
+}
+.quantity{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity .minus,.quantity .plus{
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: #311103;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 25px;
+}
+
+.quantity input{
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    border: 2px solid #311103;
+    border-radius: 5px;
+    font-size: 24px;
+     font-family: "Inter", sans-serif;
+     font-weight: 800;
+    
+}
+.quantity input[type="number"]::-webkit-outer-spin-button,
+.quantity input[type="number"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"]{
+    -moz-appearance: textfield;
 }
 .related{
     display: flex;
