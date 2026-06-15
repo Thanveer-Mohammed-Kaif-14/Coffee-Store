@@ -25,4 +25,3 @@ export const featuredProductDisplay = () => {
     .join("");
 };
 
-console.log(featuredProductDisplay());

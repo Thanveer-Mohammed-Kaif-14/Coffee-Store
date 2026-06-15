@@ -16,10 +16,10 @@ const navbarEl = `<nav class="navbar">
 
         <div class="nav-icons">
 
-            <a href="cart.html" class="cart-icon">
+            <div class="cart-icon">
                 <i class="fa-solid fa-bag-shopping"></i>
                 <span class="cart-count">0</span>
-            </a>
+            </div>
 
             <div class="hamburger" id="hamburger">
                 <span class="bar"></span>

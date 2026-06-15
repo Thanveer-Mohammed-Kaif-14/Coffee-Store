@@ -1,5 +1,6 @@
 import navbarEl from "./navbar.js";
 import { fetchCoffee } from "./FetchProduct.js";
+import cart from "./cart.js";
 
 const allproducts = await fetchCoffee();
 

@@ -1,8 +1,8 @@
  import navbarEl from "./navbar.js";
- import { featuredProductDisplay } from "./Featured.js"
+ import { featuredProductDisplay } from "./Featured.js";
+ import cart from "./cart.js";
 
 
-console.log("hello");
 
  document.querySelector(".feauter-products").innerHTML = featuredProductDisplay();
 

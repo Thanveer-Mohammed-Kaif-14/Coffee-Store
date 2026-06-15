@@ -1,5 +1,6 @@
 import navbarEl from "./navbar.js";
 import { fetchCoffee } from "./Fetchproduct.js";
+import cart from "./cart.js";
 
 const params = new URLSearchParams(window.location.search);
 const id = Number(params.get("id"));
@@ -21,45 +22,36 @@ detailContainer.innerHTML = `  <div class="details">
         <h3>&#8377; ${Selproduct.price}</h3>
                 <p class="ingri">Ingredients: ${Selproduct.ingredients}</p>
             <p>${Selproduct.description}</p>
-<div class="quantity">
-    <button class="minus">-</button>
-    <input type="number" value="1" min="1" class="inputvount">
-    <button class="plus">+</button>
-</div>
-
              <button class="AddCart">Add to cart</button>
         </div>
        </div>`
 
-       let inputCount = document.querySelector('.inputvount');
-    let count = Number(inputCount.value);
-       
-       let minus = document.querySelector('.minus')
-       let add = document.querySelector('.plus');
+const addCartBtn = document.querySelector('.cart-icon');
+const cartSidebar = document.querySelector('.cart-sidebar');
+const overlayCart = document.querySelector('.overlay-cart');
+const closeCart = document.querySelector('.close-cart');
 
+function openCart(){
 
-       
+    cartSidebar.classList.add('open');
+    overlayCart.classList.add('show');
+    document.body.style.overflow = 'hidden';
+}
 
-       add.addEventListener('click',()=>{
-      
-    let count = Number(inputCount.value);
+function closeSidebar(){
 
-    count++;
+    cartSidebar.classList.remove('open');
+    overlayCart.classList.remove('show');
+    document.body.style.overflow = 'auto';
+}
 
-    inputCount.value = count;
-       })
+addCartBtn.addEventListener('click', openCart);
+closeCart.addEventListener('click', closeSidebar);
+overlayCart.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    closeSidebar();
 
-        minus.addEventListener('click',()=>{
-        let count = Number(inputCount.value);
-
-    if(count > 0){
-        count--;
-    }
-
-    inputCount.value = count;
-
-        
-       })
-       
+});
 
        

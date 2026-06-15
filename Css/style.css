@@ -711,6 +711,76 @@ object-fit: cover;
 input[type="number"]{
     -moz-appearance: textfield;
 }
+.overlay-cart{
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,.5);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: .3s ease;
+
+    z-index: 999;
+}
+
+.overlay-cart.show{
+    opacity: 1;
+    visibility: visible;
+}
+
+.cart-sidebar{
+    position: fixed;
+
+    top: 0;
+    right: -500px;
+
+    width: 500px;
+    height: 100vh;
+
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: .3s ease;
+
+    z-index: 1000;
+
+    overflow-y: auto;
+}
+
+.cart-sidebar.open{
+    right: 0;
+}
+
+.cart-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-content{
+    flex: 1;
+    padding: 20px;
+}
+
+.cart-footer{
+    padding: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.close-cart{
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+}
 .related{
     display: flex;
     flex-direction: column;
