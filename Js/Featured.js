@@ -2,7 +2,7 @@ import { fetchCoffee } from "./Fetchproduct.js";
 
 const Product = await fetchCoffee();
 
-const featuredProducts = Product.slice(0,6);
+const featuredProducts = Product.slice(0,3);
 
 export const featuredProductDisplay = () => {
   return featuredProducts

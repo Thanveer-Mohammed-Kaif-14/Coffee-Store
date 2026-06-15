@@ -26,32 +26,4 @@ detailContainer.innerHTML = `  <div class="details">
         </div>
        </div>`
 
-const addCartBtn = document.querySelector('.cart-icon');
-const cartSidebar = document.querySelector('.cart-sidebar');
-const overlayCart = document.querySelector('.overlay-cart');
-const closeCart = document.querySelector('.close-cart');
-
-function openCart(){
-
-    cartSidebar.classList.add('open');
-    overlayCart.classList.add('show');
-    document.body.style.overflow = 'hidden';
-}
-
-function closeSidebar(){
-
-    cartSidebar.classList.remove('open');
-    overlayCart.classList.remove('show');
-    document.body.style.overflow = 'auto';
-}
-
-addCartBtn.addEventListener('click', openCart);
-closeCart.addEventListener('click', closeSidebar);
-overlayCart.addEventListener('click', (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    closeSidebar();
-
-});
-
        

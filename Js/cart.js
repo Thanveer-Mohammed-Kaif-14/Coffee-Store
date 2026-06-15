@@ -1,5 +1,6 @@
-const cart = `<button class="add-cart-btn">Add To Cart</button>
 
+
+const cart = `
 <div class="overlay-cart"></div>
 
 <div class="cart-sidebar">
@@ -10,12 +11,11 @@ const cart = `<button class="add-cart-btn">Add To Cart</button>
     </div>
 
     <div class="cart-content">
-        <p>Latte x 1</p>
-        <p>Espresso x 2</p>
+     
     </div>
 
     <div class="cart-footer">
-        <h3>Total: ₹799</h3>
+        <h3>Total: </h3>
         <button>Checkout</button>
     </div>
 
@@ -51,6 +51,8 @@ overlayCart.addEventListener('click', (e) => {
     closeSidebar();
 
 });
+
+
 
 
 export default cart;
