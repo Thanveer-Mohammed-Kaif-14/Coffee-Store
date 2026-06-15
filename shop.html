@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+
+    <link rel="stylesheet" href="./Css/style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar"></nav>
+
+ <div class="shop-container">
+       <div class="filters">
+
+    <div class="search-box">
+        <input type="text" id="search" class="input" placeholder="Search Coffee...">
+    </div>
+
+    <div class="filter-section">
+        <h3>Categories</h3>
+
+        <div class="filt-btn">
+            <button class="active" data-category="all">All</button>
+            <button data-category="Hot Coffee">Hot Coffee</button>
+            <button data-category="Cold Coffee">Cold Coffee</button>
+        </div>
+    </div>
+
+    <div class="filter-section">
+        <h3>Price Range</h3>
+
+        <label>
+            <input type="radio" name="price" value="low">
+            Under ₹200
+        </label>
+
+        <label>
+            <input type="radio" name="price" value="medium">
+            ₹200 - ₹300
+        </label>
+
+        <label>
+            <input type="radio" name="price" value="high">
+            Above ₹300
+        </label>
+    </div>
+
+    <div class="coffee-fact">
+        <h3>☕ Coffee Fact</h3>
+
+        <p>
+            Coffee is one of the most consumed beverages in the world.
+        </p>
+    </div>
+
+</div>
+    
+    <div class="all-product">
+
+    </div>
+ </div>
+
+    <script src="./Js/shop.js" type="module"></script>
+</body>
+</html>
