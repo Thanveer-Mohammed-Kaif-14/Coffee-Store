@@ -1,13 +1,13 @@
-import { fetchCoffee } from "./Fetchproduct.js";
+import { fetchCoffee } from './Fetchproduct.js'
 
-const Product = await fetchCoffee();
-console.log(Product);
+const Product = await fetchCoffee()
 
-const relatedProducts = Product.slice(5,12);
+const relatedProducts = Product.slice(5, 12)
 
 export const relatedProduct = () => {
-    return relatedProducts.map((item) => {
-        return `
+  return relatedProducts
+    .map((item) => {
+      return `
              <a href="product-detail.html?id=${item.id}">  <div class="related-card">
             <img src="${item.image}" alt="" class="feat-img">
          <div class="related-con">
@@ -21,8 +21,9 @@ export const relatedProduct = () => {
             </div>
          </div>
         </div></a>
-        `;
-    }).join('');
+        `
+    })
+    .join('')
 }
 
 document.querySelector('.related-products').innerHTML = relatedProduct()
@@ -32,4 +33,4 @@ $('.related-products').slick({
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
-});
+})
