@@ -13,7 +13,7 @@ function display(data) {
   productContainer.innerHTML = data
     .map(
       (item) => `
-    <a href="product-detail.html?id=${item.id}">   <div class="product-card">
+    <a href="product-detail.html?id=${item.id}">   <div class="product-card" data-aos="zoom-in">
             <img src="${item.image}" alt="" class="prod-img">
          <div class="product-con">
                <div class="prod-title">

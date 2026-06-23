@@ -58,11 +58,11 @@ function displayCart() {
       return `
       <div class="cart-item">
 
-        <img src="${item.image}" width="80">
+        <img src="${item.image}" width="80" class="cart-item-img">
 
-        <h4>${item.title}</h4>
+        <h4 class="cart-item-title">${item.title}</h4>
 
-        <p>₹${item.price}</p>
+        <p class="cart-item-price">₹${item.price}</p>
 
         <div class="quantity-box">
 
@@ -72,7 +72,7 @@ function displayCart() {
             -
           </button>
 
-          <span>${item.quantity}</span>
+          <span class="item-quantity">${item.quantity}</span>
 
           <button
             class="plus"
@@ -95,7 +95,7 @@ function displayCart() {
 
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0)
 
-  totalEl.textContent = `Total : ₹${total}`
+  totalEl.textContent = `Total : ₹ ${total}`
 }
 
 displayCart()

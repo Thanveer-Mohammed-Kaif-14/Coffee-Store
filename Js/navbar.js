@@ -9,7 +9,6 @@ const navbarEl = `<nav class="navbar">
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="shop.html">Shop</a></li>
-            <li><a href="blog.html">Blog</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -17,7 +16,7 @@ const navbarEl = `<nav class="navbar">
         <div class="nav-icons">
 
             <div class="cart-icon">
-                <i class="fa-solid fa-bag-shopping"></i>
+                   <img src="./images/cart.png" alt="" />
                 <span class="cart-count">0</span>
             </div>
 
@@ -35,44 +34,42 @@ const navbarEl = `<nav class="navbar">
     <div class="mobile-menu" id="mobileMenu">
         <a href="index.html">Home</a>
         <a href="Shop.html">Shop</a>
-        <a href="blog.html">Blog</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
     </div>`
 
-    const navbarcon = document.querySelector('.navbar')
-navbarcon.innerHTML = navbarEl;
+const navbarcon = document.querySelector('.navbar')
+navbarcon.innerHTML = navbarEl
 
-const hamburger = document.getElementById("hamburger");
-const mobileMenu = document.getElementById("mobileMenu");
-const overlay = document.getElementById("overlay");
+const hamburger = document.getElementById('hamburger')
+const mobileMenu = document.getElementById('mobileMenu')
+const overlay = document.getElementById('overlay')
 
 function toggleMenu() {
-    hamburger.classList.toggle("active");
-    mobileMenu.classList.toggle("active");
-    overlay.classList.toggle("active");
+  hamburger.classList.toggle('active')
+  mobileMenu.classList.toggle('active')
+  overlay.classList.toggle('active')
 }
 
-hamburger.addEventListener("click", toggleMenu);
+hamburger.addEventListener('click', toggleMenu)
 
-overlay.addEventListener("click", toggleMenu);
+overlay.addEventListener('click', toggleMenu)
 
-document.querySelectorAll(".mobile-menu a").forEach(link => {
-    link.addEventListener("click", () => {
-        hamburger.classList.remove("active");
-        mobileMenu.classList.remove("active");
-        overlay.classList.remove("active");
-    });
-});
-
-const navbar = document.querySelector('.navbar');
-
-window.addEventListener('scroll',()=>{
-   if(window.scrollY > 90){
-    navbar.classList.add('navbg')
-   }
-   else{
-    navbar.classList.remove('navbg')
-   }
+document.querySelectorAll('.mobile-menu a').forEach((link) => {
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active')
+    mobileMenu.classList.remove('active')
+    overlay.classList.remove('active')
+  })
 })
-export default navbarEl;
+
+const navbar = document.querySelector('.navbar')
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 90) {
+    navbar.classList.add('navbg')
+  } else {
+    navbar.classList.remove('navbg')
+  }
+})
+export default navbarEl

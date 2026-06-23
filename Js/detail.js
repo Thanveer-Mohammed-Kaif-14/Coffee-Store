@@ -13,10 +13,10 @@ const Selproduct = product.find((item) => item.id === id)
 const detailContainer = document.querySelector('.product-details')
 
 detailContainer.innerHTML = `  <div class="details">
-         <div class="img-container-detail">
+         <div class="img-container-detail" data-aos="fade-right">
          <img src="${Selproduct.image}" alt="">
          </div>
-        <div class="prod-detail">
+        <div class="prod-detail" data-aos="fade-left">
             <h1>${Selproduct.title}</h1>
         <h3>&#8377; ${Selproduct.price}</h3>
                 <p class="ingri">Ingredients: ${Selproduct.ingredients}</p>

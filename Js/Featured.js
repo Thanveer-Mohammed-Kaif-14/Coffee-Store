@@ -8,7 +8,7 @@ export const featuredProductDisplay = () => {
   return featuredProducts
     .map((item) => {
       return `
-           <a href="product-detail.html?id=${item.id}">  <div class="feautred-card">
+           <a href="product-detail.html?id=${item.id}">  <div class="feautred-card" data-aos="zoom-in">
             <img src="${item.image}" alt="" class="feat-img">
          <div class="featured-con">
                <div class="featured-title">
