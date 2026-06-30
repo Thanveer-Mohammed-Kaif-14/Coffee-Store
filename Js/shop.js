@@ -68,7 +68,7 @@ inputcon.addEventListener('keyup', (e) => {
 
 const params = new URLSearchParams(window.location.search)
 const id = Number(params.get('id'))
-console.log(id)
+
 
 const priceRadios = document.querySelectorAll('input[name="price"]')
 priceRadios.forEach((radio) => {

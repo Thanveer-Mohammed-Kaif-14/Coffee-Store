@@ -60,6 +60,32 @@ $('.coffee-slider').slick({
   autoplaySpeed: 2000,
   centerMode: true,
   centerPadding: '0px',
-})
+
+  responsive: [
+    {
+      breakpoint: 992, // Tablet
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 768, // Mobile
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: false
+      }
+    },
+    {
+      breakpoint: 480, // Small Mobile
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: false
+      }
+    }
+  ]
+});
 
 export default testimonals

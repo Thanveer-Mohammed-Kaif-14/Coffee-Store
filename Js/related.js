@@ -8,7 +8,7 @@ export const relatedProduct = () => {
   return relatedProducts
     .map((item) => {
       return `
-             <a href="product-detail.html?id=${item.id}">  <div class="related-card">
+             <a href="product-detail.html?id=${item.id}">  <div class="related-card" data-aos="zoom-in">
             <img src="${item.image}" alt="" class="feat-img">
          <div class="related-con">
                <div class="related-title">
@@ -33,4 +33,23 @@ $('.related-products').slick({
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 2000,
-})
+  arrows: true,
+  dots: false,
+
+  responsive: [
+    {
+      breakpoint: 992, // Tablet
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 768, // Mobile
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      }
+    }
+  ]
+});

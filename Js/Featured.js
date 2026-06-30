@@ -2,13 +2,13 @@ import { fetchCoffee } from './Fetchproduct.js'
 
 const Product = await fetchCoffee()
 
-const featuredProducts = Product.slice(0, 3)
+const featuredProducts = Product.slice(0, 6)
 
 export const featuredProductDisplay = () => {
   return featuredProducts
     .map((item) => {
       return `
-           <a href="product-detail.html?id=${item.id}">  <div class="feautred-card" data-aos="zoom-in">
+           <a href="product-detail.html?id=${item.id}">  <div class="feautred-card">
             <img src="${item.image}" alt="" class="feat-img">
          <div class="featured-con">
                <div class="featured-title">
@@ -25,3 +25,5 @@ export const featuredProductDisplay = () => {
     })
     .join('')
 }
+
+document.querySelector('.feauter-products').innerHTML = featuredProductDisplay()
